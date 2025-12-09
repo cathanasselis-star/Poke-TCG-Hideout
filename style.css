@@ -1,4 +1,4 @@
-/* --- RESET & BASIC SETUP --- */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,27 +6,27 @@
 }
 
 body {
-    /* Clean, modern font */
+   
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     line-height: 1.6;
-    color: #333; /* Softer black */
-    background-color: #ffffff; /* Clean white background (No pattern) */
+    color: #333; 
+    background-color: #ffffff; 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* --- SIMPLIFIED HEADER --- */
+
 header {
-    background-color: #dc2626; /* Keep Red for Pokémon branding */
+    background-color: #dc2626; 
     color: white;
-    padding: 1rem 0; /* More breathing room */
-    box-shadow: none; /* Removed shadow for a flat look */
+    padding: 1rem 0; 
+    box-shadow: none; 
 }
 
 .container {
     width: 100%;
-    max-width: 1000px; /* Slightly narrower for readability */
+    max-width: 1000px; 
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -37,7 +37,7 @@ nav {
     align-items: center;
 }
 
-/* Simplified Logo Area */
+
 .logo-area {
     display: flex;
     align-items: center;
@@ -49,7 +49,7 @@ nav {
     letter-spacing: -0.5px;
 }
 
-/* CSS-only Pokéball Icon (Kept but cleaner) */
+
 .pokeball-icon {
     width: 24px;
     height: 24px;
@@ -84,7 +84,7 @@ nav {
         z-index: 2;
     }
 
-/* Cleaner Navigation Links */
+
 .nav-links {
     display: flex;
     gap: 25px;
@@ -106,7 +106,7 @@ nav {
             text-underline-offset: 4px;
         }
 
-/* --- MAIN CONTENT --- */
+
 main {
     flex: 1;
     padding: 3rem 0;
@@ -118,18 +118,18 @@ main {
     margin-bottom: 1.5rem;
     color: #111;
     letter-spacing: -1px;
-    border-bottom: none; /* Removed the yellow underline */
+    border-bottom: none; 
 }
 
-/* --- SIMPLIFIED HERO SECTION --- */
+
 .hero-section {
-    background-color: #f9f9f9; /* Very light gray instead of dark gradient */
+    background-color: #f9f9f9;
     border-radius: 12px;
     padding: 3rem;
-    color: #333; /* Dark text */
+    color: #333; 
     margin-bottom: 3rem;
-    border: 1px solid #eee; /* Subtle border */
-    text-align: center; /* Centered layout is often simpler */
+    border: 1px solid #eee; 
+    text-align: center; 
 }
 
 .new-tag {
@@ -138,7 +138,7 @@ main {
     font-size: 0.7rem;
     font-weight: 700;
     padding: 4px 10px;
-    border-radius: 100px; /* Pill shape */
+    border-radius: 100px; 
     display: inline-block;
     margin-bottom: 1rem;
     letter-spacing: 1px;
@@ -160,7 +160,7 @@ main {
         background-color: #000;
     }
 
-/* --- CLEANER CARDS --- */
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -171,18 +171,18 @@ main {
     background: white;
     border-radius: 8px;
     overflow: hidden;
-    /* Removed heavy shadow, added subtle border */
+    
     border: 1px solid #e5e5e5;
     transition: transform 0.2s, border-color 0.2s;
 }
 
     .card:hover {
-        transform: translateY(-2px); /* Smaller movement */
+        transform: translateY(-2px); 
         border-color: #ccc;
     }
 
 .card-header {
-    height: 80px; /* Slightly shorter */
+    height: 80px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,7 +206,7 @@ main {
         color: #666;
     }
 
-/* --- FORMS --- */
+
 .form-container {
     background: #f9f9f9;
     padding: 2rem;
@@ -242,7 +242,7 @@ button.btn {
         background-color: black;
     }
 
-/* --- TABLES --- */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -264,9 +264,9 @@ th {
     font-weight: 600;
 }
 
-/* --- FOOTER --- */
+
 footer {
-    background-color: #f9f9f9; /* Light gray footer */
+    background-color: #f9f9f9; 
     color: #666;
     text-align: center;
     padding: 2rem 0;
@@ -284,3 +284,4 @@ footer {
         footer a:hover {
             text-decoration: underline;
         }
+
