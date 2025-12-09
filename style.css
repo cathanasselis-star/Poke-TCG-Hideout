@@ -1,0 +1,286 @@
+/* --- RESET & BASIC SETUP --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Clean, modern font */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    line-height: 1.6;
+    color: #333; /* Softer black */
+    background-color: #ffffff; /* Clean white background (No pattern) */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- SIMPLIFIED HEADER --- */
+header {
+    background-color: #dc2626; /* Keep Red for Pokémon branding */
+    color: white;
+    padding: 1rem 0; /* More breathing room */
+    box-shadow: none; /* Removed shadow for a flat look */
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px; /* Slightly narrower for readability */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Simplified Logo Area */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: -0.5px;
+}
+
+/* CSS-only Pokéball Icon (Kept but cleaner) */
+.pokeball-icon {
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid #333;
+    position: relative;
+    overflow: hidden;
+}
+
+    .pokeball-icon::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 50%;
+        background: #dc2626;
+        border-bottom: 2px solid #333;
+    }
+
+    .pokeball-icon::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        background: #333;
+        border-radius: 50%;
+        border: 2px solid white;
+        z-index: 2;
+    }
+
+/* Cleaner Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+    .nav-links a {
+        color: rgba(255, 255, 255, 0.9);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: opacity 0.2s;
+    }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: white;
+            opacity: 1;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+/* --- MAIN CONTENT --- */
+main {
+    flex: 1;
+    padding: 3rem 0;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: #111;
+    letter-spacing: -1px;
+    border-bottom: none; /* Removed the yellow underline */
+}
+
+/* --- SIMPLIFIED HERO SECTION --- */
+.hero-section {
+    background-color: #f9f9f9; /* Very light gray instead of dark gradient */
+    border-radius: 12px;
+    padding: 3rem;
+    color: #333; /* Dark text */
+    margin-bottom: 3rem;
+    border: 1px solid #eee; /* Subtle border */
+    text-align: center; /* Centered layout is often simpler */
+}
+
+.new-tag {
+    background-color: #333;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 100px; /* Pill shape */
+    display: inline-block;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.hero-btn {
+    background-color: #333;
+    color: white;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background 0.2s;
+}
+
+    .hero-btn:hover {
+        background-color: #000;
+    }
+
+/* --- CLEANER CARDS --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    /* Removed heavy shadow, added subtle border */
+    border: 1px solid #e5e5e5;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+    .card:hover {
+        transform: translateY(-2px); /* Smaller movement */
+        border-color: #ccc;
+    }
+
+.card-header {
+    height: 80px; /* Slightly shorter */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+    .card-body h3 {
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .card-body p {
+        font-size: 0.95rem;
+        color: #666;
+    }
+
+/* --- FORMS --- */
+.form-container {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    box-shadow: none;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    background: white;
+}
+
+button.btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+    button.btn:hover {
+        background-color: black;
+    }
+
+/* --- TABLES --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border: 1px solid #eee;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #fafafa;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #555;
+    font-weight: 600;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #f9f9f9; /* Light gray footer */
+    color: #666;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: auto;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+    footer a {
+        color: #333;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
