@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,29 +5,22 @@
 }
 
 body {
-   
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: Arial, sans-serif; 
     line-height: 1.6;
-    color: #333; 
-    background-color: #ffffff; 
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    color: #333;
+    background-color: #ffffff;
 }
 
-
+/* --- HEADER --- */
 header {
     background-color: #dc2626; 
-    color: white;
-    padding: 1rem 0; 
-    box-shadow: none; 
+    padding: 20px 0;
 }
 
 .container {
-    width: 100%;
-    max-width: 1000px; 
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto; 
 }
 
 nav {
@@ -37,251 +29,176 @@ nav {
     align-items: center;
 }
 
-
+/* Logo */
 .logo-area {
     display: flex;
     align-items: center;
-    gap: 12px;
     text-decoration: none;
     color: white;
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: -0.5px;
+    font-weight: bold;
+    font-size: 20px;
 }
-
 
 .pokeball-icon {
-    width: 24px;
-    height: 24px;
-    background: white;
-    border-radius: 50%;
-    border: 2px solid #333;
-    position: relative;
-    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%; 
+    margin-right: 10px;
 }
-
-    .pokeball-icon::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 50%;
-        background: #dc2626;
-        border-bottom: 2px solid #333;
-    }
-
-    .pokeball-icon::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 6px;
-        height: 6px;
-        background: #333;
-        border-radius: 50%;
-        border: 2px solid white;
-        z-index: 2;
-    }
-
 
 .nav-links {
-    display: flex;
-    gap: 25px;
-    list-style: none;
+    list-style: none; 
 }
 
-    .nav-links a {
-        color: rgba(255, 255, 255, 0.9);
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 0.95rem;
-        transition: opacity 0.2s;
+    .nav-links li {
+        display: inline-block;
     }
 
-        .nav-links a:hover, .nav-links a.active {
-            color: white;
-            opacity: 1;
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+    }
+
+        .nav-links a:hover {
             text-decoration: underline;
-            text-underline-offset: 4px;
         }
 
-
+/* --- MAIN --- */
 main {
-    flex: 1;
-    padding: 3rem 0;
+    padding: 40px 0;
 }
 
 .page-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    color: #111;
-    letter-spacing: -1px;
-    border-bottom: none; 
+    margin-bottom: 20px;
 }
 
+/* --- BANNER --- */
+.banner-section {
+    background-color: #f4f4f4; 
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
 
-.hero-section {
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    padding: 3rem;
-    color: #333; 
-    margin-bottom: 3rem;
-    border: 1px solid #eee; 
-    text-align: center; 
+.banner-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .new-tag {
     background-color: #333;
     color: white;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 100px; 
-    display: inline-block;
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 20px;
 }
 
-.hero-btn {
+.banner-btn {
+    display: inline-block;
     background-color: #333;
     color: white;
-    font-weight: 600;
-    padding: 12px 30px;
-    border-radius: 6px;
+    padding: 10px 20px;
     text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-    transition: background 0.2s;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
-    .hero-btn:hover {
+    .banner-btn:hover {
         background-color: #000;
     }
 
-
+/* --- CARDS --- */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
 }
 
 .card {
     background: white;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    overflow: hidden;
-    
-    border: 1px solid #e5e5e5;
-    transition: transform 0.2s, border-color 0.2s;
+    width: 300px; 
+    margin: 15px; 
+    text-align: center;
 }
 
-    .card:hover {
-        transform: translateY(-2px); 
-        border-color: #ccc;
-    }
-
 .card-header {
-    height: 80px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 20px;
     color: white;
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .card-body {
-    padding: 1.5rem;
+    padding: 20px;
 }
 
-    .card-body h3 {
-        margin-bottom: 0.5rem;
-        font-size: 1.1rem;
-        font-weight: 700;
-    }
-
-    .card-body p {
-        font-size: 0.95rem;
-        color: #666;
-    }
-
-
+/* --- FORMS --- */
 .form-container {
-    background: #f9f9f9;
-    padding: 2rem;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
     border-radius: 8px;
     max-width: 500px;
     margin: 0 auto;
-    border: 1px solid #eee;
-    box-shadow: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 input, select, textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    margin-bottom: 1rem;
-    font-family: inherit;
-    background: white;
 }
 
 button.btn {
+    width: 100%;
     background-color: #333;
     color: white;
-    padding: 10px 20px;
+    padding: 10px;
     border: none;
     border-radius: 4px;
-    font-weight: 600;
     cursor: pointer;
-    width: 100%;
+    font-size: 16px;
 }
 
     button.btn:hover {
         background-color: black;
     }
 
-
+/* --- TABLES --- */
 table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
-    border: 1px solid #eee;
+    margin-top: 20px;
 }
 
 th, td {
-    padding: 12px 15px;
+    border: 1px solid #ddd;
+    padding: 10px;
     text-align: left;
-    border-bottom: 1px solid #eee;
 }
 
 th {
-    background: #fafafa;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    color: #555;
-    font-weight: 600;
+    background-color: #f4f4f4;
 }
 
-
+/* --- FOOTER --- */
 footer {
-    background-color: #f9f9f9; 
+    background-color: #f4f4f4;
     color: #666;
     text-align: center;
-    padding: 2rem 0;
+    padding: 20px 0;
     margin-top: auto;
-    border-top: 1px solid #eee;
-    font-size: 0.9rem;
 }
-
-    footer a {
-        color: #333;
-        margin: 0 10px;
-        text-decoration: none;
-    }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
