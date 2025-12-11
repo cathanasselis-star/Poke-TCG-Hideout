@@ -1,0 +1,206 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; 
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #dc2626; 
+    padding: 20px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo-area {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pokeball-icon {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%; 
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none; 
+}
+
+    .nav-links li {
+        display: inline-block; /* Makes list items sit next to each other */
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+    }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+/* --- MAIN --- */
+main {
+    padding: 40px 0;
+}
+
+.page-title {
+    margin-bottom: 20px;
+}
+
+/* --- BANNER --- */
+.banner-section {
+    background-color: #f4f4f4; 
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.banner-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.new-tag {
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+.banner-btn {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+    .banner-btn:hover {
+        background-color: #000;
+    }
+
+/* --- CARDS --- */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px; 
+    margin: 15px; 
+    text-align: center;
+}
+
+.card-header {
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* --- FORMS --- */
+.form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button.btn {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    button.btn:hover {
+        background-color: black;
+    }
+
+/* --- TABLES --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #f4f4f4;
+    color: #666;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
